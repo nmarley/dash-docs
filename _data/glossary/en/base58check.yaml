@@ -4,11 +4,11 @@
 
 required:
                                            #-------------40 characters-------------#
-    title_max_40_characters_no_formatting: Base58check, Bitcoin Address Encoding
+    title_max_40_characters_no_formatting: Base58check, Dash Address Encoding
 
     summary_max_255_characters_no_formatting: >
         The method used in Dash for converting 160-bit hashes into
-        P2PKH and P2SH addresses.  Also used in other parts of Bitcoin,
+        P2PKH and P2SH addresses.  Also used in other parts of Dash,
         such as encoding private keys for backup in WIP format.  Not the
         same as other base58 implementations.
 

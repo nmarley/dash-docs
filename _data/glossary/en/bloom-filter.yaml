@@ -18,7 +18,7 @@ optional:
         - Bloom filters
 
     not_to_be_confused_with_capitalize_first_letter:
-        - Bloom filter (general computer science term, of which Bitcoin's bloom filters are a specific implementation)
+        - Bloom filter (general computer science term, of which Dash's bloom filters are a specific implementation)
 
     links_html_or_markdown_style_capitalize_first_letter:
         - "[Bloom filter](/en/developer-guide#bloom-filters) --- Developer Guide"
