@@ -8,7 +8,7 @@ required:
 
     summary_max_255_characters_no_formatting: >
         The maximum size in bytes that the consensus rules allow a block to be.
-        The current block size limit is 1000000 bytes.
+        The current block size limit is 2000000 bytes.
 
     synonyms_shown_in_glossary_capitalize_first_letter:
         - Maximum Block Size
@@ -22,7 +22,7 @@ optional:
         - Blockchain size
 
     links_html_or_markdown_style_capitalize_first_letter:
-        - "[Serialized Blocks](/en/developer-reference#serialized-blocks) --- Bitcoin.org Developer Guide"
+        - "[Serialized Blocks](/en/developer-reference#serialized-blocks) --- Developer Guide"
         - "[Block](https://en.bitcoin.it/wiki/Block) --- Bitcoin Wiki"
 
 ---

@@ -7,6 +7,7 @@ required:
     title_max_40_characters_no_formatting: Replace-by-Fee, RBF
 
     summary_max_255_characters_no_formatting: >
+        NOT IMPLEMENTED IN DASH.
         Replacing one version of an unconfirmed transaction with a
         different version of the transaction that pays a higher
         transaction fee.  May use BIP125 signaling.

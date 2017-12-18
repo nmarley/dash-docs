@@ -7,7 +7,7 @@ required:
     title_max_40_characters_no_formatting: Opcode
 
     summary_max_255_characters_no_formatting: >
-        Operation codes from the Bitcoin Script language which push data
+        Operation codes from the Dash Script language which push data
         or perform functions within a pubkey script or signature script.
 
     synonyms_shown_in_glossary_capitalize_first_letter:
@@ -28,7 +28,7 @@ optional:
     not_to_be_confused_with_capitalize_first_letter:
 
     links_html_or_markdown_style_capitalize_first_letter:
-        - "[Opcodes](/en/developer-reference#opcodes) --- Bitcoin.org Developer Reference"
+        - "[Opcodes](/en/developer-reference#opcodes) --- Developer Reference"
         - "[List of opcodes](https://en.bitcoin.it/wiki/Script) --- Bitcoin Wiki"
 
 ---
