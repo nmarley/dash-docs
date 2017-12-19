@@ -128,7 +128,7 @@ several conditions that initiate a start/restart the sync process:
 * A failure occurred during the last sync attempt (after a 1 minute cooldown before sync restarts)
 * Issuing a `mnsync reset` RPC command
 
-#### Initial Masternode Sync
+#### Initial Masternode<!--noref--> Sync
 
 This diagram shows the order in which P2P messages are sent to perform
 masternode synchronization initially after startup.
@@ -175,7 +175,7 @@ are used in both `ssc` messages and the `mnsync` RPC.
 | 999 | `MASTERNODE_SYNC_FINISHED`    | Synchronization finished |
 
 
-#### Ongoing Masternode Sync
+#### Ongoing Masternode<!--noref--> Sync
 
 Once a masternode completes an initial full sync, continuing synchronization is
 maintained by the exchange of P2P messages with other nodes. This diagram shows
@@ -218,7 +218,7 @@ current by the `govobj` messages and `govobjvote` messages relayed on the
 network. Unsynchronized peers may send `govsync` messages to request governance
 sync.
 
-#### Masternode Sync Schedule
+#### Masternode<!--noref--> Sync Schedule
 
 The following tables detail the timing of various functions used to keep the
 masternodes in sync with each other. This information is derived from
@@ -308,7 +308,7 @@ Once the syncing node receives the counts and inventories, it may request any
 | `getdata` message (govobjvote) | →              |                           | (Optional) Syncing node requests govobjvote
 |                          | ←              | `govobjvote` message      | (If requested) Governance object vote
 
-#### Sentinel
+#### Sentinel<!--noref-->
 
 [Sentinel](https://github.com/dashpay/sentinel/) is a Python application that connects to a masternode's local dashd
 instance to run as an autonomous agent for persisting, processing, and automating
@@ -322,26 +322,26 @@ Sentinel runs periodically and performs four main tasks as described below:
 governance sync, ping, governance object pruning, and superblock management.
 The governance object data is stored in a SQLite database.
 
-##### Sentinel Sync
+##### Sentinel<!--noref--> Sync
 Sentinel issues a `gobject list` RPC command and updates its database with the
 results returned from dashd. When objects are removed from the network, they are
 purged from the Sentinel database.
 
-##### Sentinel Ping
+##### Sentinel<!--noref--> Ping
 In Dash Core 12.2, use of the `watchdog` governance object type was replaced
-by integrating a sentinel information into the masternode ping (`mnp` message)
+by integrating sentinel information into the masternode ping (`mnp` message)
 via [Pull Request #1491](https://github.com/dashpay/dash/pull/1491).
 Sentinel calls the `sentinelping` RPC which updates the masternode info to
 prevent it from entering a `MASTERNODE_WATCHDOG_EXPIRED` state.
 
-##### Sentinel Prune
+##### Sentinel<!--noref--> Prune
 Sentinel 1.1.0 introduced proposal pruning which automatically votes to delete
 expired proposals following approximately half of a superblock cycle. This delay
 period ensures that proposals are not deleted prematurely. Prior to this,
 proposals remained in memory unless a sufficient number of masternodes manually
 voted to delete them.
 
-##### Sentinel Superblock
+##### Sentinel<!--noref--> Superblock
 Sentinel manages superblock creation, voting, and submission to dashd for
 network propagation.
 
