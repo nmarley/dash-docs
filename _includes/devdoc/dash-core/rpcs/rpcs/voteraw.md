@@ -19,7 +19,7 @@ The `voteraw` RPC {{summary_voteRaw}}
 *Parameter #1---masternode transaction hash*
 
 {% itemplate ntpd1 %}
-- n: "`masternode-tx-hash`"
+- n: "`masternode<!--noref-->-tx-hash`"
   t: "string (hex)"
   p: "Required<br>(exactly 1)"
   d: "Hash of the masternode collateral transaction"
@@ -29,7 +29,7 @@ The `voteraw` RPC {{summary_voteRaw}}
 *Parameter #2---vote signal*
 
 {% itemplate ntpd1 %}
-- n: "`masternode-tx-index`"
+- n: "`masternode<!--noref-->-tx-index`"
   t: "string"
   p: "Required<br>(exactly 1)"
   d: "Index of the masternode collateral transaction"

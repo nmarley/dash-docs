@@ -26,7 +26,7 @@ The `masternodebroadcast` RPC {{summary_masternodeBroadcast}}
 
 ###### MNB create-alias
 
-The `masternodebroadcast create-alias` RPC creates single remote masternode broadcast message by assigned alias configured in `masternode.conf`.
+The `masternodebroadcast create-alias` RPC creates single remote masternode broadcast message by assigned alias configured in `masternode<!--noref-->.conf`.
 
 *Parameter #2---masternode alias*
 
@@ -81,7 +81,7 @@ Result:
 
 ###### MNB create-all
 
-The `masternodebroadcast create-all` RPC creates remote masternode broadcast messages for all masternodes configured in `masternode.conf`.
+The `masternodebroadcast create-all` RPC creates remote masternode broadcast messages for all masternodes configured in `masternode<!--noref-->.conf`.
 
 *Result---broadcast message(s)*
 

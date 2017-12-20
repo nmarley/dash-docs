@@ -15,9 +15,9 @@ http://opensource.org/licenses/MIT.
 
 The `masternode` RPC {{summary_masternode}}
 
-###### Masternode Count
+###### Masternode<!--noref--> Count
 
-The `masternode count` RPC prints the number of all known masternodes.
+The `masternode<!--noref--> count` RPC prints the number of all known masternodes.
 
 *Parameter #1---mode*
 
@@ -50,7 +50,7 @@ Result:
 120
 {% endhighlight %}
 
-Get summarized count of all masternode nodes
+Get summarized count of all masternodes
 
 {% highlight bash %}
 dash-cli -testnet masternode count all
@@ -62,9 +62,9 @@ Total: 129 (PS Compatible: 97 / Enabled: 97 / Qualify: 90)
 {% endhighlight %}
 
 
-###### Masternode Current
+###### Masternode<!--noref--> Current
 
-The `masternode current` RPC prints info on current masternode winner to be paid the next block (calculated locally).
+The `masternode<!--noref--> current` RPC prints info on current masternode winner to be paid the next block (calculated locally).
 
 *Parameters: none*
 
@@ -133,11 +133,11 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Debug
+###### Masternode<!--noref--> Debug
 
-The `masternode debug` RPC prints masternode status.
+The `masternode<!--noref--> debug` RPC prints masternode status.
 
-{{WARNING}} `masternode debug` will be removed in Dash Core 0.12.3.
+{{WARNING}} `masternode<!--noref--> debug` was removed in Dash Core 0.12.2.2.
 
 *Parameters: none*
 
@@ -163,9 +163,9 @@ Masternode successfully started
 {% endhighlight %}
 
 
-###### Masternode Genkey
+###### Masternode<!--noref--> Genkey
 
-The `masternode genkey` RPC generates a new masternodeprivkey.
+The `masternode<!--noref--> genkey` RPC generates a new masternodeprivkey.
 
 *Parameters: none*
 
@@ -191,9 +191,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Outputs<!--noref-->
+###### Masternode<!--noref--> Outputs<!--noref-->
 
-The `masternode outputs` RPC prints masternode compatible outputs.
+The `masternode<!--noref--> outputs` RPC prints masternode compatible outputs.
 
 *Parameters: none*
 
@@ -226,12 +226,12 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Start
+###### Masternode<!--noref--> Start
 
-The `masternode start` RPC starts a local hot masternode configure in dash.conf.
+The `masternode<!--noref--> start` RPC starts a local hot masternode configure in dash.conf.
 
-{{WARNING}} `masternode start` will be removed in Dash Core 0.12.3. Local
-masternode support is being removed for security reasons.
+{{WARNING}} `masternode<!--noref--> start` was removed in Dash Core 0.12.2.2. Local
+masternode support was removed for security reasons.
 
 *Parameters: none*
 
@@ -257,9 +257,9 @@ Masternode successfully started
 {% endhighlight %}
 
 
-###### Masternode Start-alias
+###### Masternode<!--noref--> Start-alias
 
-The `masternode start-alias` starts a single remote masternode by assigned alias configured in masternode.conf.
+The `masternode<!--noref--> start-alias` starts a single remote masternode by assigned alias configured in masternode<!--noref-->.conf.
 
 *Parameter #1---masternode alias*
 
@@ -295,10 +295,10 @@ Result:
 }
 {% endhighlight %}
 
-###### Masternode Start-mode
+###### Masternode<!--noref--> Start-mode
 
-The `masternode start-<mode>` RPC starts remote masternodes configured in
-masternode.conf. Valid modes are: `all`, `missing`, or `disabled`.
+The `masternode<!--noref--> start-<mode>` RPC starts remote masternodes configured in
+masternode<!--noref-->.conf. Valid modes are: `all`, `missing`, or `disabled`.
 
 *Parameters: none*
 
@@ -340,7 +340,7 @@ masternode.conf. Valid modes are: `all`, `missing`, or `disabled`.
 
 *Example from Dash Core 0.12.2*
 
-Start all masternodes in masternodes.conf
+Start all masternodes in masternodes<!--noref-->.conf
 
 {% highlight bash %}
 dash-cli -testnet masternode start-all
@@ -360,7 +360,7 @@ Result:
 {% endhighlight %}
 
 
-Start missing masternodes in masternodes.conf
+Start missing masternodes in masternodes<!--noref-->.conf
 
 {% highlight bash %}
 dash-cli -testnet masternode start-missing
@@ -376,7 +376,7 @@ Result:
 {% endhighlight %}
 
 
-Start disabled masternodes in masternodes.conf
+Start disabled masternodes in masternodes<!--noref-->.conf
 
 {% highlight bash %}
 dash-cli -testnet masternode start-disabled
@@ -396,9 +396,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Status
+###### Masternode<!--noref--> Status
 
-The `masternode status` RPC prints masternode status information.
+The `masternode<!--noref--> status` RPC prints masternode status information.
 
 *Parameters: none*
 
@@ -449,9 +449,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode List
+###### Masternode<!--noref--> List
 
-The `masternode list` prints a list of all known masternodes.
+The `masternode<!--noref--> list` prints a list of all known masternodes.
 
 This RPC uses the same parameters and returns the same data as
 [masternodelist][rpc masternodelist]. Please reference it for full details.
@@ -471,9 +471,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode List-conf
+###### Masternode<!--noref--> List-conf
 
-The `masternode list-conf` RPC prints masternode.conf in JSON format.
+The `masternode<!--noref--> list-conf` RPC prints masternode<!--noref-->.conf in JSON format.
 
 *Parameters: none*
 
@@ -551,9 +551,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Winner
+###### Masternode<!--noref--> Winner
 
-The `masternode winner` RPC prints info on the next masternode winner to vote for.
+The `masternode<!--noref--> winner` RPC prints info on the next masternode winner to vote for.
 
 *Parameters: none*
 
@@ -622,9 +622,9 @@ Result:
 {% endhighlight %}
 
 
-###### Masternode Winners
+###### Masternode<!--noref--> Winners
 
-The `masternode winners` RPC prints the list of masternode winners.
+The `masternode<!--noref--> winners` RPC prints the list of masternode winners.
 
 By default, the 10 previous block winners, the current block winner, and the
 next 20 block winners are displayed. More past block winners can be requested

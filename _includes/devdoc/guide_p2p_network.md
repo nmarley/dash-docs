@@ -46,12 +46,12 @@ hardcoded into Dash Core. The response to the lookup should include one or more
 incoming connections. For example, using the [Unix `dig`command][dig command]:
 
     ;; QUESTION SECTION:
-    ;dnsseed.masternode.io.		  IN	A
+    ;dnsseed.masternode<!--noref-->.io.		  IN	A
 
     ;; ANSWER SECTION:
-    dnsseed.masternode.io.	60	IN	A	192.0.2.113
-    dnsseed.masternode.io.	60	IN	A	198.51.100.231
-    dnsseed.masternode.io.	60	IN	A	203.0.113.183
+    dnsseed.masternode<!--noref-->.io.	60	IN	A	192.0.2.113
+    dnsseed.masternode<!--noref-->.io.	60	IN	A	198.51.100.231
+    dnsseed.masternode<!--noref-->.io.	60	IN	A	203.0.113.183
 
     [...]
 

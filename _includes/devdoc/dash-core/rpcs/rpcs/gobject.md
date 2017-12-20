@@ -898,7 +898,7 @@ Result (truncated):
 
 ###### GObject Vote-alias
 
-The `gobject vote-alias` RPC votes on a governance object by masternode alias (using masternode.conf setup).
+The `gobject vote-alias` RPC votes on a governance object by masternode alias (using masternode<!--noref-->.conf setup).
 
 *Parameter #1---governance hash*
 
@@ -1074,7 +1074,7 @@ dash-cli -testnet gobject vote-conf \
 
 ###### GObject Vote-many
 
-The `gobject vote-many` RPC votes on a governance object by all masternodes (using masternode.conf setup).
+The `gobject vote-many` RPC votes on a governance object by all masternodes (using masternode<!--noref-->.conf setup).
 
 *Parameter #1---governance hash*
 

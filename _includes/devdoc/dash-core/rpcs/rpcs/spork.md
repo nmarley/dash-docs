@@ -37,7 +37,7 @@ To display the status of sporks, use the `show` or `active` syntax.
   p: "Required<br>(exactly 1)"
   d: "Object containing status"
 
-- n: "→<br>`Spork Value`"
+- n: "→<br>`Spork<!--noref--> Value`"
   t: "int64_t"
   p: "Required<br>(1 or more)"
   d: "Spork value (epoch datetime to enable/disable)"
@@ -75,7 +75,7 @@ Result:
   p: "Required<br>(exactly 1)"
   d: "Object containing status"
 
-- n: "→<br>`Spork Activation Status`"
+- n: "→<br>`Spork<!--noref--> Activation Status`"
   t: "bool"
   p: "Required<br>(1 or more)"
   d: "Spork activation status"
