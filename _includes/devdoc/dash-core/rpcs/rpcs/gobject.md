@@ -423,7 +423,15 @@ Result (wrapped):
 
 The `gobject count` RPC returns the count of governance objects and votes.
 
-*Parameters: none*
+*Parameter #1---mode*
+
+{% itemplate ntpd1 %}
+- n: "`mode`"
+  t: "string"
+  p: "Optional<br>(exactly 1)"
+  d: "Result return format:<br>`json` (default)<br>`all` - Default before Dash Core 0.12.3 (for backwards compatibility)"
+
+{% enditemplate %}
 
 *Result---count of governance objects and votes*
 
@@ -435,10 +443,28 @@ The `gobject count` RPC returns the count of governance objects and votes.
 
 {% enditemplate %}
 
-*Example from Dash Core 0.12.2*
+*Example from Dash Core 0.12.3 (mode: `json`/default)*
 
 {% highlight bash %}
 dash-cli -testnet gobject count
+{% endhighlight %}
+
+Result (wrapped):
+{% highlight json %}
+{
+  "objects_total": 177,
+  "proposals": 177,
+  "triggers": 0,
+  "other": 0,
+  "erased": 5,
+  "votes": 9680
+}
+{% endhighlight %}
+
+*Example from Dash Core 0.12.3 (mode: `all`)*
+
+{% highlight bash %}
+dash-cli -testnet gobject count all
 {% endhighlight %}
 
 Result (wrapped):
