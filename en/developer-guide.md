@@ -39,8 +39,6 @@ end_of_page: |
 paragraph at the end of one file from breaking the heading at the start
 of the following file. -->
 
-{% include devdoc/fragment_reviews_needed.md %}
-
 <input id="glossary_term" class="glossary_term" placeholder="Search the glossary, RPCs, and more">
 
 {% include devdoc/guide_intro.md %}

@@ -34,8 +34,6 @@ end_of_page: |
 </div></div>
 <div markdown="1" class="toccontent">
 
-{% include devdoc/fragment_reviews_needed.md %}
-
 <input id="glossary_term" class="glossary_term" placeholder="Search the glossary, RPCs, and more">
 
 {% include devdoc/example_intro.md %}

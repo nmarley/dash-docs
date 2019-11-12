@@ -339,21 +339,6 @@ function updateSource(e) {
   t.href = 'https://github.com/dash-docs/dash-docs/edit/master/' + closer[0].getAttribute('data-sourcefile');
 }
 
-function disclaimerClose(e) {
-  // Auto close temporary disclaimer in devel-docs.
-  if (e) cancelEvent(e);
-  var t = document.getElementById('develdocdisclaimer');
-  t.parentNode.removeChild(t);
-  if (typeof(Storage) === 'undefined') return;
-  sessionStorage.setItem('develdocdisclaimerclose', '1');
-}
-
-function disclaimerAutoClose() {
-  // Auto close temporary disclaimer in devel-docs if session says so.
-  if (typeof(Storage) === 'undefined') return;
-  if (sessionStorage.getItem('develdocdisclaimerclose') === '1') disclaimerClose();
-}
-
 function walletMenuListener(e) {
   // Listen for events on the wallet menu.
   var walletSelectPlatform = function(e) {
