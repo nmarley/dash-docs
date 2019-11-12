@@ -16,7 +16,7 @@ COPY . .
 
 RUN bundle install
 
-RUN make travis
+RUN make all
 
 # Static site should be in /build/_site
 # Can use docker cp to extract
