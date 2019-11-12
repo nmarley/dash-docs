@@ -55,7 +55,6 @@ endif
 ## Pre-build tests which, aggregated together, take less than 10 seconds to run on a typical PC
 pre-build-tests-fast: check-for-non-ascii-urls check-for-wrong-filename-assignments \
     check-for-missing-rpc-summaries \
-    check-for-missing-copyright-licenses \
     check-bundle \
     check-for-english-in-en-dir \
 
