@@ -27,7 +27,8 @@ module Jekyll
       locs = {}
       enabled = ENV['ENABLED_LANGS'];
       enabled = enabled.split(' ') if !enabled.nil?
-      Dir.foreach('_translations') do |file|
+      translations = Dir.entries('_translations') || []
+      translations.each do |file|
         next if file == '.' or file == '..' or file == 'COPYING'
         lang = file.split('.')[0]
         #Ignore lang if disabled
@@ -42,7 +43,8 @@ module Jekyll
         Dir.mkdir(site.dest)
       end
       locs.each do |lang,value|
-        Dir.foreach('_templates') do |file|
+        templates = Dir.entries('_templates') || []
+        templates.each do |file|
           next if file == '.' or file == '..'
           id = file.split('.')[0]
           dst = locs[lang]['url'][id]
