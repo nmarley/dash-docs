@@ -1,88 +1,18 @@
 langsorder:
-#- 'id'
-#- 'da'
-#- 'de'
 - 'en'
-#- 'es'
-#- 'fr'
-#- 'it'
-#- 'hu'
-#- 'nl'
-#- 'pl'
-#- 'pt_BR'
-#- 'ro'
-#- 'sl'
-#- 'sv'
-#- 'tr'
-#- 'el'
-#- 'bg'
-#- 'ru'
-#- 'uk'
-#- 'ar'
-#- 'fa'
-#- 'hi'
-#- 'ko'
-#- 'ja'
-#- 'zh_CN'
-#- 'zh_TW'
 
 langs:
-  #'ar': 'العربية'
-  #'bg': 'български'
-  #'da': 'Dansk'
-  #'de': 'Deutsch'
   'en': 'English'
-  #'el': 'Ελληνικά'
-  #'es': 'Español'
-  #'fa': 'فارسی'
-  #'fr': 'Français'
-  #'hi': 'हिन्दी'
-  #'hu': 'Magyar'
-  #'id': 'Bahasa Indonesia'
-  #'it': 'Italiano'
-  #'ja': '日本語'
-  #'ko': '한국의'
-  #'nl': 'Nederlands'
-  #'pl': 'Polski'
-  #'pt_BR': 'Português Brasil'
-  #'ro': 'Română'
-  #'ru': 'Русский'
-  #'sl': 'Slovenščina'
-  #'sv': 'Svenska'
-  #'tr': 'Türkçe'
-  #'uk': 'Українська'
-  #'zh_CN': '简体中文'
-  #'zh_TW': '繁體中文'
-
-redirects:
-  #/ar/بت-كوين-للمطورين: /ar/bitcoin-for-developers
-  #/ar/مصادر: /ar/resources
-  #/ar/مفردات: /ar/vocabulary
-  #/fa/بیت-کوین-برای-توسعه-دهندگان: /fa/bitcoin-for-developers
-  #/fa/منابع: /fa/resources
-  #/fa/واژگان: /fa/vocabulary
-  #/ru/биткоин-разработчикам: /ru/bitcoin-for-developers
-  #/ru/ресурсы: /ru/resources
-  #/ru/термины: /ru/vocabulary
-  #/tr/bilmelisiniz: /tr/bilmeniz-gerekenler
-  #/tr/yeni-baslamak: /tr/baslarken
-  #/tr/hakkinda: /tr/sss
-  ### Old releases pages; stop adding to this list after 0.8.2
-  #/bitcoin_es_latam.pdf: /files/bitcoin-paper/bitcoin_es_latam.pdf
-  /bitcoin_ru.pdf: /files/bitcoin-paper/bitcoin_ru.pdf
 
 aliases:
   --author=Satoshi Nakamoto: Satoshi Nakamoto
   #gavinandresen: Gavin Andresen
 
-safe:        false
+safe: false
 port: 4000
-## Used in older version of Jekyll
-base-url:    /
-## Used in newer versions of Jekyll
-baseurl:    /
+baseurl: /
 
-source:      .
+source: .
 destination: ./_site
 plugins_dir: ./_plugins
 exclude:
@@ -94,10 +24,10 @@ exclude:
     - scripts
     - ignore
 
-future:      true
-lsi:         false
-markdown:    kramdown
-permalink:   date
+future: true
+lsi: false
+markdown: kramdown
+permalink: date
 excerpt_separator: "<!-- END_EXCERPT -->"
 
 rdiscount:
@@ -111,11 +41,11 @@ kramdown:
   enable_coderay: false
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    ## With the 'text' option, no highlighting is applied by default. We
-    ## need this for backwards compatibility with existing code blocks.
+    # With the 'text' option, no highlighting is applied by default. We
+    # need this for backwards compatibility with existing code blocks.
     default_lang: text
 
-    ## Might be useful in the future, but turn off for upgrade to Jekyll 3.0
+    # Might be useful in the future, but turn off for upgrade to Jekyll 3.0
     css_class:
 
   coderay:
@@ -127,43 +57,41 @@ kramdown:
     coderay_css: style
 
 text:
-  ## Values last updated 2017-05-21
-  ## All variable names must indicate unit type for easy translation of adjacent text,
-  ##   such as: subsidy_in_decimal_bitcoins or
-  ##   bitcoin_org_docs_maintainer_email_link
-  ## For increasing variables, like chain size, choose a somewhat higher
-  ##   value so we don't need to update too often
+  # Values last updated 2019-11-12
+  # All variable names must indicate unit type for easy translation of adjacent text,
+  #   such as: subsidy_in_decimal_bitcoins or
+  #   bitcoin_org_docs_maintainer_email_link
+  # For increasing variables, like chain size, choose a somewhat higher
+  #   value so we don't need to update too often
   subsidy_in_decimal_bitcoins: 12.5
-  ## cd ~ ; du -sh .bitcoin/ --exclude=testnet3 --exclude=regtest
-  bitcoin_datadir_gb: 145
-  ## Slightly smaller than the total datadir size
-  chain_gb: 140
-  ## The main difference between the datadir size and the chain size, if
-  ## you don't have any extra indices
-  bitcoin_datadir_gb_pruned: 5
-  ## the tx= field in: grep UpdateTip .bitcoin/debug.log | tail -n1
-  total_tx_count_in_millions: 230
-  typical_ibd_time_in_hours: 4
-  typical_144_block_catchup_time_in_minutes: 5
-  bitcoin_org_docs_maintainer_email_link: '<a href="mailto:dave@dtrt.org">Dave Harding</a>'
-  ## Before updating this, verify all assertions are still correct: git grep site.text.assertion_month
-  ## Use ISO-8601 format, but feel free to round to the nearest month
-  assertion_month: 2017-06-01
+  # cd ~ ; du -sh .bitcoin/ --exclude=testnet3 --exclude=regtest
+  bitcoin_datadir_gb: 31
+  # Slightly smaller than the total datadir size
+  chain_gb: 13
+  # The main difference between the datadir size and the chain size, if
+  # you don't have any extra indices
+  bitcoin_datadir_gb_pruned: 18
+  # the tx= field in: grep UpdateTip .dash/debug.log | tail -n1
+  total_tx_count_in_millions: 19
+  typical_ibd_time_in_hours: 2.5
+  # Before updating this, verify all assertions are still correct: git grep site.text.assertion_month
+  # Use ISO-8601 format, but feel free to round to the nearest month
+  assertion_month: 2019-11-12
 
 
-## Items in devsearches will appear in the search box in the order they
-## are listed below. For the top-level ("Glossary", "RPCs", etc...) this
-## is arbitrary based on whatever we think is most important. For the
-## second-level, this should be alphabetical order or another order that
-## will make intuitive sense to the user.
+# Items in devsearches will appear in the search box in the order they are
+# listed below. For the top-level ("Glossary", "RPCs", etc...) this is
+# arbitrary based on whatever we think is most important. For the second-level,
+# this should be alphabetical order or another order that will make intuitive
+# sense to the user.
 devsearches:
 
-  ## Initialize the glossary array here so it appears first in the
-  ## search box. _plugins/glossary.rb will provide alphabetical ordering
+  # Initialize the glossary array here so it appears first in the search box.
+  # _plugins/glossary.rb will provide alphabetical ordering
   "Glossary":
 
-  ## RPCs currently documented on Bitcoin.org. CamelCase names (with
-  ## leading capital) for easier quick scanning
+  # RPCs currently documented on Bitcoin.org. CamelCase names (with leading
+  # capital) for easier quick scanning
   "RPCs":
     - 'AbandonTransaction': "/en/developer-reference#abandontransaction"
     - 'AbortRescan': "/en/developer-reference#abortrescan"
@@ -313,8 +241,8 @@ devsearches:
     - 'WalletPassphrase': "/en/developer-reference#walletpassphrase"
     - 'WalletPassphraseChange': "/en/developer-reference#walletpassphrasechange"
 
-  ## REST calls currently documented on Bitcoin.org. CamelCase names (with
-  ## leading capital) for easier quick scanning
+  # REST calls currently documented on Bitcoin.org. CamelCase names (with
+  # leading capital) for easier quick scanning
   "REST":
     - 'GetBlock': "/en/developer-reference#get-block"
     - 'GetBlock-noTxDetails': "/en/developer-reference#get-blocknotxdetails"
@@ -325,8 +253,8 @@ devsearches:
     - 'GetMemPool-info': "/en/developer-reference#get-mempoolinfo"
     - 'GetTx': "/en/developer-reference#get-tx"
 
-  ## Opcodes currently implemented in Bitcoin Core master branch. After
-  ## we document them on Bitcoin.org, these links will be updated
+  # Opcodes currently implemented in Bitcoin Core master branch. After we
+  # document them on Bitcoin.org, these links will be updated
   "Opcodes":
     - "OP_0 (OP_FALSE)": "https://en.bitcoin.it/wiki/Script#Constants"
     - "OP_PUSHDATA1": "https://en.bitcoin.it/wiki/Script#Constants"
@@ -452,8 +380,8 @@ devsearches:
     - "OP_NOP9 (reserved)": "https://en.bitcoin.it/wiki/Script#Reserved_words"
     - "OP_NOP10 (reserved)": "https://en.bitcoin.it/wiki/Script#Reserved_words"
 
-  ## Only notable and non-withdrawn BIPs. Try to keep descriptions short
-  ## and focused on likely keywords
+  # Only notable and non-withdrawn BIPs. Try to keep descriptions short and
+  # focused on likely keywords
   "BIPs":
     - "BIP1: BIP purpose and guidelines": "https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki"
     - "BIP9: soft fork mechanism": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
@@ -508,13 +436,12 @@ devsearches:
     - "DIP7: LLMQ Signing Requests / Sessions": "https://github.com/dashpay/dips/blob/master/dip-0007.md"
     - "DIP8: ChainLocks": "https://github.com/dashpay/dips/blob/master/dip-0008.md"
 
-  ## Bitcoin P2P Protocol messages documented on Bitcoin.org
+  # Bitcoin P2P Protocol messages documented on Bitcoin.org
   "P2P Messages":
     - "addr":  "/en/developer-reference#addr"
     - "block": "/en/developer-reference#block"
     - "blocktxn": "/en/developer-reference#blocktxn"
     - "cmpctblock": "/en/developer-reference#cmpctblock"
-    #- "feefilter": "/en/developer-reference#feefilter"
     - "filteradd": "/en/developer-reference#filteradd"
     - "filterclear": "/en/developer-reference#filterclear"
     - "filterload": "/en/developer-reference#filterload"
@@ -585,15 +512,7 @@ devsearches:
     - "ix": "/en/developer-reference#ix"
     - "txlvote": "/en/developer-reference#txlvote"
 
-donation_banner:
-  address: 1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
-  display: true
-  amounts_in_usd:
-    - 5
-    - 25
-    - 50
-
-## Options as of version 3.4.20 are: nested (default), compact, compressed, or expanded
+# Options as of version 3.4.20 are: nested (default), compact, compressed, or expanded
 sass:
   style: compressed
 
