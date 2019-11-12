@@ -22,47 +22,16 @@ module Jekyll
         print 'Sitemap disabled' + "\n"
         return
       end
-      #Load translations
-      locs = {}
-      enabled = ENV['ENABLED_LANGS'];
-      enabled = enabled.split(' ') if !enabled.nil?
-      translations = Dir.entries('_translations') || []
-      translations.each do |file|
-        next if file == '.' or file == '..' or file == 'COPYING'
-        lang=file.split('.')[0]
-        #Ignore lang if disabled
-        if lang != 'en' and !enabled.nil? and !enabled.include?(lang)
-          next
-        end
-        locs[lang] = YAML.load_file('_translations/'+file)[lang]
-      end
       #Create destination directory if does not exists
       if !File.directory?(site.dest)
         Dir.mkdir(site.dest)
       end
       File.open(File.join(site.dest, 'sitemap.xml'), 'w+') do |sitemap|
-        #Open sitemap
+        # Open sitemap
         sitemap.puts '<?xml version="1.0" encoding="UTF-8"?>'
         sitemap.puts '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
         sitemap.puts '	xmlns:xhtml="http://www.w3.org/1999/xhtml">'
-        #Add translated pages with their alternative in each languages
-        locs['en']['url'].each do |id,value|
-          locs.each do |lang,value|
-            #Don't add a page if their url is not translated
-            next if locs[lang]['url'][id].nil? or locs[lang]['url'][id] == ''
-            sitemap.puts '<url>'
-            sitemap.puts '  <loc>https://dash-docs.github.io/'+lang+'/'+CGI::escape(locs[lang]['url'][id])+'</loc>'
-            locs.each do |altlang,value|
-              next if locs[altlang]['url'][id].nil? or locs[altlang]['url'][id] == '' or altlang == lang
-              sitemap.puts '  <xhtml:link'
-              sitemap.puts '    rel="alternate"'
-              sitemap.puts '    hreflang="'+altlang+'"'
-              sitemap.puts '    href="https://dash-docs.github.io/'+altlang+'/'+CGI::escape(locs[altlang]['url'][id])+'" />'
-            end
-            sitemap.puts '</url>'
-          end
-        end
-	#Add static non-translated pages
+        # Add static non-translated pages
         Dir.glob('en/**/*.{md,html}').concat(Dir.glob('*.{md,html}')).each do |file|
           next if file == 'index.html' or file == '404.html' or file == 'README.md'
           #Ignore google webmaster tools
