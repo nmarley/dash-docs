@@ -145,20 +145,11 @@ check-for-broken-markdown-reference-links:
 ## links in the output, indicating there's no reference definition
 	$S find $(SITEDIR) -name '*.html' -type f -not -path "*/doxygen/html/*" | xargs grep '\]\[' | eval $(ERROR_ON_OUTPUT)
 
-check-for-non-ascii-urls:
-## Always check all translated urls don't contain non-ASCII
-## characters or spaces.
-	$S find _translations -name '*.yml' -type f | while read file \
-	    ; do grep -H . $$file | sed -n -e '/url:/,$$p' \
-	    | grep -P ': +[a-z0-9\-]+: +.*([^\x00-\x7f]|[^a-z0-9\/\-"]).*$$' \
-	; done | eval $(ERROR_ON_OUTPUT)
-
 check-for-broken-kramdown-tables:
 ## Kramdown tables are easy to break. When broken, they produce a
 ## paragraph starting with a | (pipe). I can't imagine any reason we'd
 ## have a regular paragraph starting with a pipe, so error on any occurences.
 	$S grep '<p[^>]*>|' _site/en/developer-* | eval $(ERROR_ON_OUTPUT)
-
 
 check-for-duplicate-header-ids:
 ## When Kramdown automatically creates header id tags, it avoids using
