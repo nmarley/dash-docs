@@ -202,19 +202,6 @@ check-for-wrong-filename-assignments:
 	   | grep -v '^\./\(.*\):{.*filename=.\1"' \
 	   | eval $(ERROR_ON_OUTPUT)
 
-check-for-missing-copyright-licenses:
-## Error on any files in the _includes directory that don't include a
-## statement that looks like a copyright license. (It doesn't have to
-## say MIT license, but it has to say something.) This can be extended
-## to include other directories by adding them after "_includes/"
-	$S git grep -iL 'This file is licensed' _includes/ | eval $(ERROR_ON_OUTPUT)
-	$S git ls-files | grep -v '^_alerts' \
-          | while read file ; do \
-            if sed -n 1p $$file | grep -q '^---$$' ; then \
-              grep -iL 'This file is licensed' $$file ; \
-            fi ; \
-          done | eval $(ERROR_ON_OUTPUT)
-
 check-for-missing-rpc-summaries:
 ## Make sure the Quick Reference section has a summary for each RPC we
 ## have documented
