@@ -169,8 +169,6 @@ running
 separately. Also, plugins that use remote APIs may take a long time to
 run if the API site is running slow.
 
-For a list of languages, look in the `_translations` directory.
-
 #### Publishing Previews
 
 You can publish your previews online to any static hosting service.
