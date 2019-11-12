@@ -290,7 +290,7 @@ http://opensource.org/licenses/MIT.
 [version message]: /en/developer-reference#version "A P2P network message sent at the begining of a connection to allow protocol version negotiation"
 
 {% comment %}<!-- Other internal site links; alphabetical order -->{% endcomment %}
-[bcc contribute code]: /{{page.lang}}/{% translate development url %}
+[bcc contribute code]: /{{page.lang}}/{{ development url }}
 
 [dashd initial setup]: /en/developer-examples
 [bitcoinpdf]: https://bitcoin.org/en/bitcoin-paper

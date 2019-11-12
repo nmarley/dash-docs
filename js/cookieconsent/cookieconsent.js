@@ -234,7 +234,7 @@ id: cookie-notification
   var cookieconsent = {
     options: {
       message: 'This website uses cookies to ensure you get the best experience on our website. ',
-      dismiss: '{% translate cookieaccept %}',
+      dismiss: '{{ cookieaccept }}',
       learnMore: 'More info',
       link: null,
       container: null, // selector
@@ -245,8 +245,8 @@ id: cookie-notification
       markup: [
         '<div class="cc_banner-wrapper {{containerClasses}}">',
         '<div class="cc_banner cc_container cc_container--open">',
-        '<a href="#ok" data-cc-event="click:dismiss" target="_blank" class="cc_btn cc_btn_accept_all">{% translate cookieaccept %}</a>',
-        '{% translate cookiemessage %}',
+        '<a href="#ok" data-cc-event="click:dismiss" target="_blank" class="cc_btn cc_btn_accept_all">{{ cookieaccept }}</a>',
+        '{{ cookiemessage }}',
         '</div>',
         '</div>'
       ]

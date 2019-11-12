@@ -7,50 +7,50 @@ id: about-us
 ---
 {% if site.env.BITCOINORG_BUILD_TYPE %}
 <!-- Note: this file is built non-deterministically -->
-<h1>{% translate pagetitle %}</h1>
-<p class="summary">{% translate pagedesc %}</p>
+<h1>{% pagetitle %}</h1>
+<p class="summary">{% pagedesc %}</p>
 
-<h2 id="own">{% translate own %}</h2>
-<p>{% translate owntxt %}</p>
+<h2 id="own">{% own %}</h2>
+<p>{% owntxt %}</p>
 {% case page.lang %}
 {% when 'id' or 'da' or 'de' or 'es' or 'fr' or 'it' or 'hu' or 'nl' or 'pl' or 'pt_BR' or 'ro' or 'sl' or 'sv' or 'tr' or 'el' or 'bg' or 'ru' or 'uk' or 'ar' or 'fa' or 'hi' or 'ko' or 'ja' or 'zh_CN' or 'zh_TW' %}
 {% else %}
-  <p>{% translate owntxt2 %}</p>
-  <p>{% translate owntxt3 %}</p>
-  <p>{% translate owntxt4 %}</p>
+  <p>{% owntxt2 %}</p>
+  <p>{% owntxt3 %}</p>
+  <p>{% owntxt4 %}</p>
 {% endcase %}
 
-<h2 id="control">{% translate control %}</h2>
-<p>{% translate controltxt %}</p>
+<h2 id="control">{% control %}</h2>
+<p>{% controltxt %}</p>
 
-<h2 id="mission">{% translate mission %}</h2>
+<h2 id="mission">{% mission %}</h2>
 <ul>
-  <li>{% translate missiontxt1 %}</li>
-  <li>{% translate missiontxt2 %}</li>
-  <li>{% translate missiontxt3 %}</li>
-  <li>{% translate missiontxt4 %}</li>
-  <li>{% translate missiontxt5 %}</li>
-  <li>{% translate missiontxt6 %}</li>
-  <li>{% translate missiontxt7 %}</li>
+  <li>{% missiontxt1 %}</li>
+  <li>{% missiontxt2 %}</li>
+  <li>{% missiontxt3 %}</li>
+  <li>{% missiontxt4 %}</li>
+  <li>{% missiontxt5 %}</li>
+  <li>{% missiontxt6 %}</li>
+  <li>{% missiontxt7 %}</li>
 </ul>
 
-<h2 id="help">{% translate help %}</h2>
-<p>{% translate helptxt %}</p>
+<h2 id="help">{% help %}</h2>
+<p>{% helptxt %}</p>
 
-<h3 id="maintenance">{% translate maintenance %}</h3>
+<h3 id="maintenance">{% maintenance %}</h3>
 
 <div class="credit">
   <p><a href="https://github.com/wbnns">Will Binns</a><span>Website maintainer</span></p>
   <p><a href="https://github.com/crwatkins">Craig Watkins</a><span>Wallet maintainer</span></p>
 </div>
 
-<h3 id="sponsorship">{% translate sponsorship %}</h3>
+<h3 id="sponsorship">{% sponsorship %}</h3>
 
 <div class="credit">
   <p><a href="https://bitcoinfoundation.org/">The Bitcoin Foundation</a><span>2014 - 2015</span></p>
 </div>
 
-<h3 id="translation">{% translate translation %}</h3>
+<h3 id="translation">{% translation %}</h3>
 
 <div class="credit">
   <p>Ar Vicco<span>Russian</span></p>
@@ -64,7 +64,7 @@ id: about-us
   <p>Thomas Pryds<span>Danish</span></p>
 </div>
 
-<h3 id="service_contributors">{% translate service_contributors %}</h3>
+<h3 id="service_contributors">{% service_contributors %}</h3>
 
 <div class="credit">
   <p><a href="https://www.browserstack.com/">BrowserStack</a><span>Browser testing</span></p>
@@ -73,7 +73,7 @@ id: about-us
   <p><a href="https://travis-ci.org/">Travis CI</a><span>Continuous integration</span></p>
 </div>
 
-<h3 id="inactive-contributors">{% translate inactive_contributors %}</h3>
+<h3 id="inactive-contributors">{% inactive_contributors %}</h3>
 
 <div class="credit">
   <p><a href="https://github.com/saivann">Saïvann Carignan</a><span>Website maintainer</span></p>
@@ -81,14 +81,14 @@ id: about-us
   <p><a href="https://github.com/harding">David A. Harding</a><span>Documentation writing</span></p>
 </div>
 
-<h3 id="owners">{% translate owners %}</h3>
+<h3 id="owners">{% owners %}</h3>
 
 <div class="credit">
   <p><a href="https://github.com/cobra-bitcoin">Cøbra</a><span>Co-Owner</span></p>
   <p><a href="https://github.com/theymos">theymos</a><span>Co-Owner</span></p>
 </div>
 
-<h3 id="github">{% translate github %}</h3>
+<h3 id="github">{% github %}</h3>
 
 <div class="contributors">
   {% for c in site.sitecontributors %}

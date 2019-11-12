@@ -24,17 +24,17 @@ voc:
   - wallet
 
 ---
-<h1>{% translate pagetitle %}</h1>
-<p class="summarytxt">{% translate summary %}</p>
-<h2 id="table-of-contents">{% translate table %}</h2>
+<h1>{% pagetitle %}</h1>
+<p class="summarytxt">{% summary %}</p>
+<h2 id="table-of-contents">{% table %}</h2>
 
 <div class="index">
-{% alphab_for v in page.voc %}
-<a href="#{% translate {{v}} anchor.vocabulary %}">{% translate {{v}} %}</a>
-{% endalphab_for %}
+{% for v in page.voc %}
+<a href="#{% {{v}} anchor.vocabulary %}">{% {{v}} %}</a>
+{% endfor %}
 </div>
 
-{% alphab_for v in page.voc %}
-<h2 id="{% translate {{v}} anchor.vocabulary %}">{% translate {{v}} %}</h2>
-<p>{% translate {{v}}txt %}</p>
-{% endalphab_for %}
+{% for v in page.voc %}
+<h2 id="{% {{v}} anchor.vocabulary %}">{% {{v}} %}</h2>
+<p>{% {{v}}txt %}</p>
+{% endfor %}
