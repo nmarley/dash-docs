@@ -22,3 +22,27 @@ The following quick guides will help you get started:
 + [Adding Events, Release Notes and Alerts](https://github.com/dash-docs/dash-docs/blob/master/docs/adding-events-release-notes-and-alerts.md)
 + [Adding Blog Posts](https://github.com/dash-docs/dash-docs/blob/master/docs/adding-blog-posts.md)
 -->
+
+## Build via Docker
+
+You can use the provided Dockerfile to build the site:
+
+```sh
+docker build -t dash-docs .
+```
+
+... then you can copy the static site out:
+
+```sh
+docker create --name temp-docs dash-docs
+docker cp temp-docs:/build/_site ./the-site
+docker rm temp-docs
+```
+
+Now the site has been copied to your local machine in `./the-site`.
+
+To quickly serve the static site via nginx Docker image:
+
+```sh
+docker run --rm --name nginx -p 127.0.0.1:80:80 -v $PWD/the-site:/usr/share/nginx/html:ro nginx:alpine
+```
