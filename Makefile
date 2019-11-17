@@ -12,54 +12,22 @@ JEKYLL_LOG=._jekyll.log
 #######################
 
 ## `make` (no arguments): just build
-default: clean build
-
-## `make preview`: start the built-in Jekyll preview
-preview: clean
-	$S export LANG=C.UTF-8 ; bundle exec jekyll serve --incremental
+default: build
 
 ## `make test`: don't build, but do run all tests
 test: pre-build-tests post-build-tests
 
-## `make valid`: build and run fast tests
-valid: clean pre-build-tests-fast build post-build-tests-fast
-
 ## `make all`: build and run all tests
-all: clean pre-build-tests build post-build-tests
-
-## `make deployment`: for use on build server
-deployment: clean install-deps-deployment \
-    valid
-
-## `make travis`: for use with Travis CI
-travis: clean travis-background-keepalive \
-    install-deps-development \
-    all
-
-
-
-
-
-## Install dependencies (development version)
-install-deps-development:
-	bundle install
-
-## Install dependencies (deployment version)
-install-deps-deployment:
-ifdef BUNDLE_DIR
-	bundle install --deployment --without :slow_test --path=$(BUNDLE_DIR)
-else
-	bundle install --deployment --without :slow_test
-endif
+all: pre-build-tests build post-build-tests
 
 ## Pre-build tests which, aggregated together, take less than 10 seconds to run on a typical PC
-pre-build-tests-fast: check-for-wrong-filename-assignments \
+pre-build-tests: check-for-wrong-filename-assignments \
     check-for-missing-rpc-summaries \
     check-bundle \
     check-for-english-in-en-dir \
 
 ## Post-build tests which, aggregated together, take less than 10 seconds to run on a typical PC
-post-build-tests-fast: check-for-build-errors ensure-each-svg-has-a-png check-for-liquid-errors \
+post-build-tests: check-for-build-errors ensure-each-svg-has-a-png check-for-liquid-errors \
     check-for-missing-anchors check-for-broken-markdown-reference-links \
     check-for-broken-kramdown-tables check-for-duplicate-header-ids \
     check-for-headers-containing-auto-link check-for-missing-subhead-links \
@@ -68,34 +36,17 @@ post-build-tests-fast: check-for-build-errors ensure-each-svg-has-a-png check-fo
     check-jshint \
     check-for-javascript-in-svgs
 
-## All pre-build tests, including those which might take multiple minutes
-pre-build-tests: pre-build-tests-fast
-	@ true
-
-## All post-build tests, including those which might take multiple minutes
-post-build-tests: post-build-tests-fast \
-    #check-html-proofer
-
 ## All manual updates to content that should be run by a human. This
 ## will create or update files which should then be diffed and commited.
 ## It's acceptable for this to overwrite existing content as long as the
 ## overwritten content is under version control
 manual-updates: manual-update-summaries-file
 
-## All manual checks that can be run by a human
-manual-checks: manual-check-diff-sha256sums
-
-
-
-
 
 #################
 ## SUB-TARGETS ##
 #################
 ERROR_ON_OUTPUT="sed '1s/^/ERROR:\n/' | if grep . ; then sed 1iERROR ; false ; else true ; fi"
-
-clean:
-	$S bundle exec jekyll clean
 
 ## Always build using the default locale so log messages can be grepped.
 ## This should not affect webpage output.
@@ -208,18 +159,6 @@ manual-update-summaries-file:
 	$S echo "This file is licensed under the terms of its source texts{%endcomment%}" >> _includes/helpers/summaries.md
 	$S grep -rh --exclude='*summaries.md' 'assign summary_' _includes/ | LANG=UTF-8 sort >> _includes/helpers/summaries.md
 
-manual-check-diff-sha256sums:
-## A manually-run command to check the locally-built
-## _site/sha256sums.txt file against the same file on the webserver to
-## see if any files were built differently upstream from what we have
-## locally
-	$S echo "Files listed below (if any) have different hashes"
-	$S curl -s -o- https://bitcoin.org/sha256sums.txt \
-	  | sort - _site/sha256sums.txt \
-	  | uniq -u \
-	  | sort -k2
-
-
 check-html-proofer:
 	$S bundle exec ruby _contrib/bco-htmlproof
 
@@ -231,9 +170,6 @@ check-bundle:
 ## check, you'll get confusing error messages when your deps aren't up
 ## to date
 	$S ! bundle check | egrep -v "(Resolving dependencies...|The Gemfile's dependencies are satisfied)"
-
-travis-background-keepalive:
-	$S { while ps aux | grep -q '[m]ake' ; do echo "Ignore me: Travis CI keep alive" ; sleep 1m ; done ; } &
 
 check-for-subheading-anchors:
 ## Ensure all subheadings on the site have anchors so the Javascript
