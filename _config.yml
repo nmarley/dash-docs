@@ -1,9 +1,9 @@
 # Site settings
-title: Dash documentation
+title: DashDocs.org
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://dashdocs.org" # the base hostname & protocol for your site
-github_url: "https://github.com/dash-docs/dash-docs"
-# github_url: "https://github.com/nmarley/dash-docs"
+# github_url: "https://github.com/dash-docs/dash-docs"
+github_url: "https://github.com/nmarley/dash-docs"
 
 # Build settings
 markdown: kramdown
