@@ -63,9 +63,9 @@ chmod 0600 dash.conf
 For development, it's safer and cheaper to use Dash's test network (testnet),
 regression test mode (regtest), or a develper network (devnet) described below.
 
-Questions about Dash use are best sent to the [Dash forum][forum
-tech support] and [Discord channels][Discord channels]. Errors or suggestions related to
-documentation on dash-docs.github.io can be [submitted as an issue][docs issue].
+Questions about Dash use are best sent to the [Dash forum][forum tech support]
+and [Discord channels][Discord channels]. Errors or suggestions related to
+documentation on {{ site.title }} can be [submitted as an issue][docs issue].
 
 In the following documentation, some strings have been shortened or wrapped: "[...]"
 indicates extra data was removed, and lines ending in a single backslash "\\"

@@ -439,12 +439,12 @@ http://opensource.org/licenses/MIT.
 [Discord channels]: http://www.dashchat.org
 [DNS A records]: http://tools.ietf.org/html/rfc1035#section-3.2.2
 [DNS Seed Policy]: https://github.com/dashpay/dash/blob/master/doc/dnsseed-policy.md
-[docs issue]: https://github.com/dash-docs/dash-docs/issues
+[docs issue]: {{ site.github_url }}/issues
 [ECDSA]: https://en.wikipedia.org/wiki/Elliptic_Curve_DSA
 [edit bandwidth sharing guide]: https://github.com/bitcoin-dot-org/bitcoin.org/edit/master/en/full-node.md
 [Electrum server]: https://github.com/spesmilo/electrum-server
 [Eloipool]: https://github.com/luke-jr/eloipool
-[errors in docs]: https://github.com/dash-docs/dash-docs/issues?q=is%3Aissue+label%3A%22Dev+Docs%22
+[errors in docs]: {{ site.github_url }}/issues?q=is%3Aissue+label%3A%22Dev+Docs%22
 [fake satoshi transaction]: https://www.reddit.com/r/Bitcoin/comments/3fv42j/blockchaininfo_spoofed_transactions_problem_aug_4/
 [forum tech support]: https://www.dash.org/forum/categories/dash-support.61/
 [ghash betcoin double spend]: https://bitcointalk.org/index.php?topic=321630.msg3445371
@@ -475,8 +475,8 @@ http://opensource.org/licenses/MIT.
 [netcat]: https://en.wikipedia.org/wiki/Netcat
 [nop opcodes]: https://en.bitcoin.it/wiki/Script#Reserved_words
 [offline transactions]: http://bitcoin.stackexchange.com/a/34122/21052
-[open a pull request]: https://github.com/dash-docs/dash-docs#working-with-github
-[open an issue]: https://github.com/dash-docs/dash-docs/issues/new
+[open a pull request]: {{ site.github_url }}/compare
+[open an issue]: {{ site.github_url }}/issues/new
 [Payment Request Generator]: https://github.com/gavinandresen/paymentrequest/blob/master/php/demo_website/createpaymentrequest.php
 [Piotr Piasecki's testnet faucet]: https://tpfaucet.appspot.com/
 [prime symbol]: https://en.wikipedia.org/wiki/Prime_%28symbol%29

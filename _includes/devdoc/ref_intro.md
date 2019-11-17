@@ -13,11 +13,10 @@ specification][]. To make the best use of
 this documentation, you may want to install the current version of Dash
 Core, either from [source][core git] or from a [pre-compiled executable][core executable].
 
-Questions about Dash development are best asked in one of the
-[Dash development communities][dev communities].
-Errors or suggestions related to
-documentation on [dash-docs.github.io](https://dash-docs.github.io) can be
-[submitted as an issue][docs issue].
+Questions about Dash development are best asked in one of the [Dash development
+communities][dev communities].  Errors or suggestions related to documentation
+on [{{ site.title }}]({{ site.url }}) can be [submitted as an issue][docs
+issue].
 
 In the following documentation, some strings have been shortened or wrapped: "[...]"
 indicates extra data was removed, and lines ending in a single backslash "\\"
