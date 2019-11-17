@@ -18,6 +18,8 @@ RUN bundle install
 
 RUN make all
 
+# TODO: Doxygen
+
 # Static site should be in /build/_site
 # Can use docker cp to extract
 
