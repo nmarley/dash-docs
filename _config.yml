@@ -1,5 +1,15 @@
-langsorder:
-- 'en'
+# Site settings
+title: Dash documentation
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://dashdocs.org" # the base hostname & protocol for your site
+github_url: "https://github.com/dash-docs/dash-docs"
+# github_url: "https://github.com/nmarley/dash-docs"
+
+# Build settings
+markdown: kramdown
+permalink: date
+#permalink: none
+# see http://jekyllrb.com/docs/permalinks/ for available options
 
 langs:
   'en': 'English'
@@ -9,8 +19,7 @@ aliases:
   #gavinandresen: Gavin Andresen
 
 safe: false
-port: 4000
-baseurl: /
+#baseurl: /
 
 source: .
 destination: ./_site
@@ -26,8 +35,6 @@ exclude:
 
 future: true
 lsi: false
-markdown: kramdown
-permalink: date
 excerpt_separator: "<!-- END_EXCERPT -->"
 
 rdiscount:
