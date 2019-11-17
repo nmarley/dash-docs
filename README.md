@@ -44,5 +44,5 @@ Now the site has been copied to your local machine in `./the-site`.
 To quickly serve the static site via nginx Docker image:
 
 ```sh
-docker run --rm --name nginx -p 127.0.0.1:80:80 -v $PWD/the-site:/usr/share/nginx/html:ro nginx:alpine
+docker run --rm --name nginx -p 127.0.0.1:80:80 -v $PWD/the-site:/usr/share/nginx/html:ro -v $PWD/nginx-default.conf:/etc/nginx/conf.d/default.conf:ro nginx:alpine
 ```
