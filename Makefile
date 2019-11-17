@@ -21,17 +21,24 @@ test: pre-build-tests post-build-tests
 all: pre-build-tests build post-build-tests
 
 ## Pre-build tests which, aggregated together, take less than 10 seconds to run on a typical PC
-pre-build-tests: check-for-wrong-filename-assignments \
+pre-build-tests: \
+    check-for-wrong-filename-assignments \
     check-for-missing-rpc-summaries \
     check-bundle \
-    check-for-english-in-en-dir \
+    check-for-english-in-en-dir
 
 ## Post-build tests which, aggregated together, take less than 10 seconds to run on a typical PC
-post-build-tests: check-for-build-errors ensure-each-svg-has-a-png check-for-liquid-errors \
-    check-for-missing-anchors check-for-broken-markdown-reference-links \
-    check-for-broken-kramdown-tables check-for-duplicate-header-ids \
-    check-for-headers-containing-auto-link check-for-missing-subhead-links \
-	check-for-empty-title-tag \
+post-build-tests: \
+    check-for-build-errors \
+    ensure-each-svg-has-a-png \
+    check-for-liquid-errors \
+    check-for-missing-anchors \
+    check-for-broken-markdown-reference-links \
+    check-for-broken-kramdown-tables \
+    check-for-duplicate-header-ids \
+    check-for-headers-containing-auto-link \
+    check-for-missing-subhead-links \
+    check-for-empty-title-tag \
     check-for-subheading-anchors \
     check-jshint \
     check-for-javascript-in-svgs
