@@ -15,9 +15,12 @@ RUN apt update && \
 RUN gem update --system && \
   gem install bundler
 
-COPY . .
-
+# Copy gemfiles first to avoid re-installing dependencies w/every file change
+COPY Gemfile .
+COPY Gemfile.lock .
 RUN bundle install
+
+COPY . .
 
 RUN make all
 
