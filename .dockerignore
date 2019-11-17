@@ -1,4 +1,4 @@
-# .git/
+.git/
 Dockerfile
 .dockerignore
 README.md
