@@ -35,5 +35,5 @@ CMD ["/bin/bash"]
 # Because Docker is able to clean up the intermediate image, the final image is
 # reduced in size from 1.23GB to just 18.7MB.
 FROM scratch
-COPY --from=0 /build/_site /
+COPY --from=0 /build/_site /site
 CMD ["/bin/sh"]
