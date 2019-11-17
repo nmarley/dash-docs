@@ -27,9 +27,7 @@ end_of_page: |
 * Table of contents
 {:toc}
 
-<ul class="goback"><li><a href="/en/">Return To Overview</a></li></ul>
-<ul class="reportissue"><li><a href="https://github.com/dash-docs/dash-docs/issues/new" onmouseover="updateIssue(event);">Report An Issue</a></li></ul>
-<ul class="editsource"><li><a href="https://github.com/dash-docs/dash-docs/tree/master/_includes" onmouseover="updateSource(event);">Edit On GitHub</a></li></ul>
+<ul class="goback"><li><a href="/">Return To Overview</a></li></ul>
 
 </div></div>
 <div markdown="1" class="toccontent">
