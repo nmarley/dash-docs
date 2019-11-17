@@ -382,6 +382,7 @@ http://opensource.org/licenses/MIT.
 [DIP6]: https://github.com/dashpay/dips/blob/master/dip-0006.md
 [DIP7]: https://github.com/dashpay/dips/blob/master/dip-0007.md
 [DIP8]: https://github.com/dashpay/dips/blob/master/dip-0008.md
+[DIP10]: https://github.com/dashpay/dips/blob/master/dip-0010.md
 
 {% comment %}<!-- Other external site links; alphabetical order -->{% endcomment %}
 [#bitcoin]: https://webchat.freenode.net/?channels=bitcoin&uio=d4
@@ -431,9 +432,8 @@ http://opensource.org/licenses/MIT.
 [core script.h]: https://github.com/dashpay/dash/blob/master/src/script/script.h
 [creative commons attribution 3.0 license]: https://creativecommons.org/licenses/by/3.0/
 [Dash Masternode Tool]: https://github.com/Bertrand256/dash-masternode-tool
-[Dash Seeder]: https://github.com/nightlydash/dash-seeder/tree/master
-[DashJ]: https://github.com/HashEngineering/dashj
-[dashmnb]: https://github.com/chaeplin/dashmnb
+[Dash Seeder]: https://github.com/nightlydash/dash-seeder
+[DashJ]: https://github.com/dashevo/dashj
 [DER]: https://en.wikipedia.org/wiki/X.690#DER_encoding
 [dig command]: https://en.wikipedia.org/wiki/Dig_%28Unix_command%29
 [Discord channels]: http://www.dashchat.org

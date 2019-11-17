@@ -11,6 +11,7 @@ permalink: date
 #permalink: none
 # see http://jekyllrb.com/docs/permalinks/ for available options
 
+# Disable custom plugins, and ignore symbolic links.
 safe: false
 
 source: .
@@ -25,12 +26,8 @@ exclude:
     - scripts
     - ignore
 
+# Publish posts or collection documents with a future date.
 future: true
-lsi: false
-excerpt_separator: "<!-- END_EXCERPT -->"
-
-rdiscount:
-  extensions: []
 
 kramdown:
   auto_ids: true,
@@ -434,6 +431,7 @@ devsearches:
     - "DIP6: Long-Living Masternode Quorums": "https://github.com/dashpay/dips/blob/master/dip-0006.md"
     - "DIP7: LLMQ Signing Requests / Sessions": "https://github.com/dashpay/dips/blob/master/dip-0007.md"
     - "DIP8: ChainLocks": "https://github.com/dashpay/dips/blob/master/dip-0008.md"
+    - "DIP10: LLMQ InstantSend": "https://github.com/dashpay/dips/blob/master/dip-0010.md"
 
   # Bitcoin P2P Protocol messages documented on Bitcoin.org
   "P2P Messages":

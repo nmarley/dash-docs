@@ -32,9 +32,9 @@ definition of the term will be displayed in a tooltip.
 
 {% autocrossref %}
 
-The dash-docs.github.io Developer Documentation describes how Dash works to
-help educate new Dash developers, but it is not a specification---and
-it never will be.
+The {{ site.title }} Developer Documentation describes how Dash works to help
+educate new Dash developers, but it is not a specification---and it never will
+be.
 
 Dash security depends on consensus. Should your program diverge from
 consensus, its security is weakened or destroyed. The cause of the

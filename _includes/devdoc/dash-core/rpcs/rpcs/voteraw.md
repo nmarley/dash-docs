@@ -82,7 +82,7 @@ The `voteraw` RPC {{summary_voteRaw}}
 - n: "`vote-sig`"
   t: "string (base64)"
   p: "Required<br>(exactly 1)"
-  d: "The vote signature created by external application (i.e. [Dash Masternode Tool][] or [dashmnb][]).<br><br>Must match the Dash Core ([governance vote signature format][])."
+  d: "The vote signature created by external application (i.e. [Dash Masternode Tool][]).<br><br>Must match the Dash Core ([governance vote signature format][])."
 
 {% enditemplate %}
 
