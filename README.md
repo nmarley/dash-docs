@@ -17,7 +17,7 @@ docker build -t dash-docs .
 
 ```sh
 docker create --name temp-docs dash-docs
-docker cp temp-docs:/build/_site ./the-site
+docker cp temp-docs:/ ./the-site
 docker rm temp-docs
 ```
 
