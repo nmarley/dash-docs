@@ -11,15 +11,7 @@ permalink: date
 #permalink: none
 # see http://jekyllrb.com/docs/permalinks/ for available options
 
-langs:
-  'en': 'English'
-
-aliases:
-  --author=Satoshi Nakamoto: Satoshi Nakamoto
-  #gavinandresen: Gavin Andresen
-
 safe: false
-#baseurl: /
 
 source: .
 destination: ./_site
