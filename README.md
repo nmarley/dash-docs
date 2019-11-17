@@ -17,7 +17,7 @@ docker build -t dash-docs .
 
 ```sh
 docker create --name temp-docs dash-docs
-docker cp temp-docs:/ ./the-site
+docker cp temp-docs:/site ./the-site
 docker rm temp-docs
 ```
 
@@ -28,3 +28,11 @@ To quickly serve the static site via nginx Docker image:
 ```sh
 docker run --rm --name nginx -p 127.0.0.1:80:80 -v $PWD/the-site:/usr/share/nginx/html:ro -v $PWD/nginx-default.conf:/etc/nginx/conf.d/default.conf:ro nginx:alpine
 ```
+
+## TODO
+
+Clean up / migrate DashDocs to new build system (Hugo)
+
+- [ ] remove en/ dir (only have English)
+- [ ] Doxygen
+- [ ] move to Hugo
