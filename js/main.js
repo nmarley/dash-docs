@@ -196,12 +196,6 @@ function librariesShow(e) {
   onTouchClick(e, init);
 }
 
-function freenodeShow(e) {
-  // Display freenode chat window on the "Development" page at user request.
-  document.getElementById('chatbox').innerHTML = '<iframe style=width:98%;min-width:400px;height:600px src="http://webchat.freenode.net/?channels=bitcoin-dev" />';
-  cancelEvent(e);
-}
-
 function updateToc() {
   // Update table of content active entry and browser url on scroll.
   var pageoffset;
@@ -306,37 +300,6 @@ function updateToc() {
   addEvent(window, 'popstate', evtimestamp);
   addEvent(window, 'load', evtimestamp);
   init();
-}
-
-function updateIssue(e) {
-  // Update GitHub issue link pre-filled with current page location.
-  var t = getEvent(e, 'target');
-  t.href = 'https://github.com/dash-docs/dash-docs/issues/new?body=' + encodeURIComponent('Location: ' + window.location.href.toString() + "\n\n");
-}
-
-function updateSource(e) {
-  // Update GitHub source file link pre-filled with current page location.
-  if (!document.getElementsByClassName) return;
-  var t = getEvent(e, 'target'),
-    nodes = document.getElementsByClassName('sourcefile'),
-    pageoffset = Math.max(0, getPageYOffset() + 100),
-    windowy = getWindowY(),
-    fallback = nodes[0],
-    first = [fallback, getTop(fallback)],
-    last = [fallback, getTop(fallback)],
-    closer = [fallback, getTop(fallback)];
-  // Find first, last and closer node.
-  for (var i = 0, n = nodes.length; i < n; i++) {
-    var top = getTop(nodes[i]);
-    if (top < first[1]) first = [nodes[i], top];
-    if (top > last[1]) last = [nodes[i], top];
-    if (top < pageoffset + 10 && top > closer[1]) closer = [nodes[i], top];
-  }
-  // Set closer title to first or last title if at the top or bottom of the page.
-  if (pageoffset < first[1]) closer = [first[0], first[1]];
-  if (windowy + pageoffset >= getHeight(document.body)) closer = [last[0], last[1]];
-  // Set updated url to source file.
-  t.href = 'https://github.com/dash-docs/dash-docs/edit/master/' + closer[0].getAttribute('data-sourcefile');
 }
 
 function walletMenuListener(e) {
@@ -473,8 +436,9 @@ function walletRotate() {
 }
 
 function makeEditable(e) {
-  // An easter egg that makes the page editable when user click on the page and hold their mouse button for one second.
-  // This trick allows translators and writers to preview their work.
+  // An easter egg that makes the page editable when user click on the page and
+  // hold their mouse button for one second.  This trick allows translators and
+  // writers to preview their work.
   e = e || window.event;
   switch (getEvent(e, 'type')) {
     case 'mousedown':
